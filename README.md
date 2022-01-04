@@ -7,8 +7,7 @@
 - Создан репозиторий `goit-js-hw-11`.
 - При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую страницу на `GitHub Pages`.
 - При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Проект собран с помощью
-  [parcel-project-template](https://github.com/goitacademy/parcel-project-template).
+- Проект собран с помощью `parcel-project-template`
 - Для HTTP запросов использована библиотека [axios](https://axios-http.com/).
 - Используется синтаксис `async/await`.
 - Для уведомлений использована библиотека [notiflix](https://github.com/notiflix/Notiflix#readme).
