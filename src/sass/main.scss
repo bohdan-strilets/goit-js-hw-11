@@ -1,3 +1,9 @@
+// Brakepoints
+
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1440px;
+
 // Base
 
 body {
@@ -36,9 +42,17 @@ p {
 // Utilities
 
 .container {
-  width: 1400px;
+  width: $mobile;
   margin: 0 auto;
   margin-top: 110px;
+  padding: 0 10px 0 10px;
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
 }
 
 // Search form
@@ -61,7 +75,7 @@ p {
 }
 
 .search-form__input {
-  width: 300px;
+  width: 180px;
   height: 40px;
   padding: 10px;
 
@@ -75,6 +89,14 @@ p {
   &::placeholder {
     font-size: 16px;
     color: #cccccc;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: 400px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: 700px;
   }
 }
 
@@ -96,23 +118,42 @@ p {
     background-color: #0f3443;
     color: #ffffff;
   }
+
+  @media screen and (min-width: $mobile) {
+    width: 70px;
+  }
 }
 
 // Gallery
 
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  margin: -10px;
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -10px;
+  }
 }
 
 .photo-card {
-  width: calc((100% - 10px * 8) / 4);
-  margin: 10px;
+  margin-bottom: 10px;
+  width: 300px;
 
   box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   overflow: hidden;
+
+  :last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 10px * 4) / 2);
+    margin: 10px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 10px * 8) / 4);
+  }
 }
 
 .info {
